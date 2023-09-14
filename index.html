@@ -3,23 +3,55 @@
 <head>
     <title>Countdown Timer</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
         .container {
             text-align: center;
-            font-size: 24px;
+            font-size: 28px;
             margin-top: 100px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            margin: 0;
+            padding: 5px;
+        }
+
+        #countdown {
+            font-size: 36px;
+            margin-top: 20px;
         }
 
         .whatsapp-button {
-            display: block;
+            display: inline-block;
             margin-top: 20px;
+            background-color: #25d366;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128c7e;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <p>Masa untuk ZulHilmi bayaq hutang:</p>
+        <p>Masa untuk ZulHilmi bayar hutang:</p>
         <p id="countdown">mengira...</p>
-        <a href="https://wa.me/+60149600354" class="whatsapp-button">Tekan Sini Untuk Bayaq</a>
+        <a href="https://wa.me/+60149600354" class="whatsapp-button">Tekan Sini Untuk Bayar</a>
     </div>
 
     <script>
@@ -39,7 +71,7 @@
 
                 document.getElementById("countdown").innerHTML = `${hours} hours ${minutes} minutes ${seconds} seconds`;
             } else {
-                document.getElementById("countdown").innerHTML = "+1 Dosa";
+                document.getElementById("countdown").innerHTML = " Lambat!!! +1 Dosa";
             }
         }
 
